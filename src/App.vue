@@ -1,8 +1,15 @@
 <template>
   <header>
-    <div class="cart-items" @click="router.push({ name: 'CartView' })">
-      <p>Items in Cart: {{ store.cart.length }}</p>
-    </div>
+
+    <v-toolbar title="Application">
+      <v-btn
+          @click="router.push({ name: 'CartView' })"
+          color="primary"
+          variant="elevated"
+
+      >Items in Cart: {{ store.cart.length }}
+      </v-btn>
+    </v-toolbar>
   </header>
   <main>
     <RouterView />
