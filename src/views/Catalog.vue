@@ -9,35 +9,10 @@
           sm="4"
           @click="goToProductPage(product.id)"
       >
-        <v-sheet class="ma-2 pa-2">
-          <v-card
-              class="product"
-          >
-            <v-img
-                :src="product.thumbnail"
-                height="200px"
-                cover
-            />
-
-            <v-card-title>
-              {{ product.brand }}
-            </v-card-title>
-
-            <v-card-subtitle>
-              $ {{ product.price }}
-            </v-card-subtitle>
-
-            <v-card-text>
-              {{ product.description }}
-            </v-card-text>
-
-            <v-card-actions>
-              <v-btn @click="goToProductPage(product.id)">
-                Add to cart
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-sheet>
+        <product-item
+            :product-data="product"
+            @item-clicked="goToProductPage"
+        />
       </v-col>
     </v-row>
 
@@ -46,8 +21,12 @@
 
 <script>
   import { defineComponent } from "vue";
+  import ProductItem from "@/components/ProductItem.vue";
   export default defineComponent({
-    name: 'CatalogView'
+    name: 'CatalogView',
+    components: {
+      ProductItem
+    }
   })
 </script>
 
