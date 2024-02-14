@@ -7,7 +7,7 @@
           color="primary"
           variant="elevated"
 
-      >Items in Cart: {{ store.cart.length }}
+      >Itens no carrinho: {{ store.cart.length }}
       </v-btn>
     </v-toolbar>
   </header>

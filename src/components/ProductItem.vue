@@ -23,7 +23,7 @@
 
       <v-card-actions>
         <v-btn @click="goToProductPage(props.productData.id)">
-          Add to cart
+          Adicionar ao carrinho
         </v-btn>
       </v-card-actions>
     </v-card>
